@@ -45,3 +45,14 @@ print(some_value+bias)
 
 # Activation function => functions that kind of dtermine that final output before it becomes input of another layer
 # or it maybe dtermine the final output to your network in gneral
+
+# implementing one layer with neurons
+import numpy as np
+inputs=[1,2,3,2.5]
+weights=[0.2,0.8,-0.5,1.0]
+bias=2
+output=np.dot(weights,inputs)+bias
+print(output)
+# implementing activation function
+activated_outputs = np.maximum(0, layer_outputs)
+print(activated_outputs)
