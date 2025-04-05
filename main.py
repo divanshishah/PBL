@@ -1,5 +1,5 @@
 # Modelling only one neuron with four inputs
-inputs=[1,2,3,2.5]    #input layer is simply whatever values you have that you are tracking
+# inputs=[1,2,3,2.5]    #input layer is simply whatever values you have that you are tracking
 # weights=[0.2, 0.8, -0.5, 1.0]
 # every unique neuron has a unique bias
 # bias=2
@@ -28,11 +28,11 @@ inputs=[1,2,3,2.5]    #input layer is simply whatever values you have that you a
 #         inputs[0]*weights3[0] + inputs[1]*weights3[1] + inputs[2]*weights3[2] + inputs[3]*weights3[3] + bias3]
 # print(output)
 
-weights=[[0.2, 0.8, -0.5, 1.0],
-         [0.5, -0.91, 0.26, -0.5],
-         [-0.26, -0.27, 0.17, 0.87]]
-
-biases=[2,3,0.5]
+# weights=[[0.2, 0.8, -0.5, 1.0],
+#          [0.5, -0.91, 0.26, -0.5],
+#          [-0.26, -0.27, 0.17, 0.87]]
+#
+# biases=[2,3,0.5]
 #
 # layer_outputs=[]
 # for neuron_weights,neuron_bias in zip(weights,biases)
@@ -43,16 +43,24 @@ bias=0.7
 print(some_value*weight)
 print(some_value+bias)
 
-# Activation function => functions that kind of dtermine that final output before it becomes input of another layer
-# or it maybe dtermine the final output to your network in gneral
-
-# implementing one layer with neurons
+# Activation function => functions that kind of determine that final output before it becomes input of another layer
+# or it maybe determine the final output to your network in general
 import numpy as np
 inputs=[1,2,3,2.5]
 weights=[0.2,0.8,-0.5,1.0]
 bias=2
 output=np.dot(weights,inputs)+bias
 print(output)
+# implementing one layer with neurons
+# import numpy as np
+inputs=np.array([1,2,3,2.5])
+weights=np.array([[0.2, 0.8, -0.5, 1.0],
+          [0.5, -0.91, 0.26, -0.5],
+          [-0.26, -0.27, 0.17, 0.87]])
+biases=[2,3,0.5]
+output=np.dot(weights,inputs)+biases
+print(output)
+
 # implementing activation function
-activated_outputs = np.maximum(0, layer_outputs)
-print(activated_outputs)
+# activated_outputs = np.maximum(0, layer_outputs)
+# print(activated_outputs)
